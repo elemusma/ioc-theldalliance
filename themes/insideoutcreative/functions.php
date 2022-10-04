@@ -148,6 +148,43 @@ function baseurl_shortcode( $atts ) {
 
 }
 
+function btn_shortcode( $atts, $content = null ) {
+
+	$a = shortcode_atts( array(
+	
+	'class' => '',
+	
+	'href' => '#',
+	
+	'style' => '',
+	
+	'target' => ''
+	
+	), $atts );
+	
+	// return '<a class="btn-accent-primary" href="' . esc_attr($a['href']) . '" target="' . esc_attr($a['target']) . '">' . $content . '</a>';
+	
+	return '<a class="' . esc_attr($a['class']) . '" href="' . esc_attr($a['href']) . '" style="' . esc_attr($a['style']) . '" target="' . esc_attr($a['target']) . '">' . $content . '</a>';
+	
+	}
+	
+	add_shortcode( 'button', 'btn_shortcode' );
+
+	function divider_shortcode( $atts, $content = null ) {
+
+		$a = shortcode_atts( array(
+	
+			'class' => '',
+			
+			'style' => ''
+			
+			), $atts );
+
+		return '<div class="divider ' . esc_attr($a['class']) . '" style="' . esc_attr($a['style']) . '"></div>';
+	}
+
+	add_shortcode( 'divider', 'divider_shortcode' );
+
 // ENABLE WOOCOMMERCE
 // add_action('after_setup_theme',function() {
 //     add_theme_support('woocommerce');

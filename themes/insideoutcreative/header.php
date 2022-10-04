@@ -112,7 +112,9 @@ echo '<h1 class="pt-3 pb-3 mb-0 bold" style="font-size:4.5rem;">' . get_the_titl
 
 if(have_rows('header')): while(have_rows('header')): the_row();
 
-echo '<div class="divider"></div>';
+echo '<div class="m-auto">';
+echo '<div class="divider" style="margin:10px auto 25px;"></div>';
+echo '</div>';
 
 echo '<h2>' . get_sub_field('subtitle') . '</h2>';
 
@@ -136,7 +138,7 @@ if( $link ):
 $link_url = $link['url'];
 $link_title = $link['title'];
 $link_target = $link['target'] ? $link['target'] : '_self';
-echo '<a class="bg-accent btn" href="' . esc_url( $link_url ) . '" target="' . esc_attr( $link_target ) . '" style="border-radius:25px;">' . esc_html( $link_title ) . '</a>';
+echo '<a class="btn-main" href="' . esc_url( $link_url ) . '" target="' . esc_attr( $link_target ) . '" style="border-radius:25px;box-shadow:0;">' . esc_html( $link_title ) . '</a>';
 endif;
 
 echo '</div>';

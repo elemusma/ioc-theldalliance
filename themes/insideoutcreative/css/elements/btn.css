@@ -2,10 +2,25 @@
     border: 2px solid var(--accent-primary);
     border-radius: 0;
     padding: 5px 25px;
-    transition:all .25s ease-in-out;
+    transition: all .25s ease-in-out;
 }
+
 .bg-accent-outline:hover {
     border: 2px solid var(--accent-primary);
-    background:var(--accent-primary);
-    color:white;
+    background: var(--accent-primary);
+    color: white;
+}
+
+a.btn-main {
+    background: var(--accent-quinary);
+    color: white;
+    padding: 15px 35px;
+    border-radius: 25px;
+    box-shadow: 3px 4px rgba(32, 42, 45, .5);
+    display: inline-block;
+    transition: all .25s ease-in-out;
+}
+
+a.btn-main:hover {
+    background: var(--accent-quaternary);
 }

@@ -3,6 +3,7 @@
   --accent-secondary: #ccc000;
   --accent-tertiary: #202a2d;
   --accent-quaternary: #ff844d;
+  --accent-quinary: #0073df;
 }
 
 html {
@@ -169,7 +170,7 @@ hr.text-white {
   background: var(--accent-quaternary);
   height: 1px;
   width: 100px;
-  margin: 10px auto 25px;
+  /* margin: 10px auto 25px; */
 }
 
 /* content */

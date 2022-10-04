@@ -8,7 +8,7 @@
 
 .text-accent,
 a {
-  color: var(--accent-primary);
+  color: var(--accent-quinary);
 }
 
 .text-accent-secondary {
@@ -17,10 +17,6 @@ a {
 
 .text-accent-tertiary {
   color: var(--accent-tertiary);
-}
-
-.text-accent {
-  color: var(--accent-primary);
 }
 
 .text-gray {
