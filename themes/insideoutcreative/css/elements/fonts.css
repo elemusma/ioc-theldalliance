@@ -80,3 +80,41 @@ strong {
 blockquote {
   font-size: 90%;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: rubik, sans-serif;
+}
+
+h1 .bold,
+h2 .bold,
+h3 .bold,
+h4 .bold,
+h5 .bold,
+h6 .bold {
+  font-weight: 800;
+}
+
+/* Rubik Regular
+font-family: rubik, sans-serif;
+font-weight: 400;
+font-style: normal;
+
+Rubik Italic
+font-family: rubik, sans-serif;
+font-weight: 400;
+font-style: italic;
+
+Rubik Bold
+font-family: rubik, sans-serif;
+font-weight: 700;
+font-style: normal;
+
+Rubik Bold Italic
+font-family: rubik, sans-serif;
+font-weight: 700;
+font-style: italic; */

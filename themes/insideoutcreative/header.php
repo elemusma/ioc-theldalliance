@@ -23,7 +23,7 @@ if(get_field('custom_css')) {
 <div class="nav">
 <div class="container">
 <div class="row align-items-center">
-<div class="col-lg-3 col-md-6">
+<div class="col-lg-1 col-md-6">
 <a href="<?php echo home_url(); ?>">
 <?php 
 $logo = get_field('logo','options'); 
@@ -32,6 +32,14 @@ echo wp_get_attachment_image($logo['id'],'full',"",['class'=>'w-100 h-auto']);
 }
 ?>
 </a>
+</div>
+<div class="col-6">
+<?php
+    wp_nav_menu(array(
+        'menu' => 'primary',
+        'menu_class'=>'menu d-flex flex-wrap list-unstyled justify-content-center mb-0'
+    ));
+?>
 </div>
 <div class="col-lg-4 col-6 desktop-hidden">
 <a id="navToggle" class="nav-toggle">
@@ -42,6 +50,7 @@ echo wp_get_attachment_image($logo['id'],'full',"",['class'=>'w-100 h-auto']);
 </div>
 </a>
 </div>
+
 <div id="navMenuOverlay" class="position-fixed z-2"></div>
 <div class="col-md-9 nav-items bg-white desktop-hidden" id="navItems">
 
@@ -85,19 +94,63 @@ echo wp_get_attachment_image($globalPlaceholderImg['id'],'full','',['class'=>'w-
 
 
 if(is_front_page()) {
-echo '<div class="pt-5 pb-5 text-white text-center">';
-echo '<div class="position-relative">';
-echo '<div class="multiply overlay position-absolute w-100 h-100 bg-img"></div>';
-echo '<div class="position-relative">';
+echo '<div class="position-relative text-white text-center" style="padding:350px 0 50px;">';
+
+echo '<div class="position-absolute" style="top:25%;right:25px;">';
+echo get_template_part('partials/si-vertical');
+
+if(have_rows('header')): while(have_rows('header')): the_row();
+    echo '<h2 style="transform:rotate(90deg) translate(0px, -75%);transform-origin:left;width:0;">' . get_sub_field('hashtag') . '</h2>';
+endwhile; endif;
+
+echo '</div>';
+
 echo '<div class="container">';
 echo '<div class="row">';
 echo '<div class="col-12">';
-echo '<h1 class="pt-3 pb-3 mb-0">' . get_the_title() . '</h1>';
+echo '<h1 class="pt-3 pb-3 mb-0 bold" style="font-size:4.5rem;">' . get_the_title() . '</h1>';
+
+if(have_rows('header')): while(have_rows('header')): the_row();
+
+echo '<div class="divider"></div>';
+
+echo '<h2>' . get_sub_field('subtitle') . '</h2>';
+
+echo '<div class="" style="height:250px;"></div>';
+
+// start register bar
+echo '<div class="register-bar d-inline-flex align-items-center pr-4 pl-4 pt-3 pb-3 bg-gray" style="border-radius:50px;background:#202a2d;">';
+
+echo '<div class="register-bar-icon pr-3">';
+echo get_sub_field('icon');
+echo '</div>';
+
+echo '<div class="register-bar-text pr-3">';
+echo '<p style="" class="mb-0"><strong>' . get_sub_field('field_label') . '</strong></p>';
+echo '</div>';
+
+echo '<div class="register-bar-button">';
+
+$link = get_sub_field('link');
+if( $link ): 
+$link_url = $link['url'];
+$link_title = $link['title'];
+$link_target = $link['target'] ? $link['target'] : '_self';
+echo '<a class="bg-accent btn" href="' . esc_url( $link_url ) . '" target="' . esc_attr( $link_target ) . '" style="border-radius:25px;">' . esc_html( $link_title ) . '</a>';
+endif;
+
+echo '</div>';
+
+echo '</div>';
+// end register bar
+
+endwhile; endif;
+
 echo '</div>';
 echo '</div>';
 echo '</div>';
-echo '</div>';
-echo '</div>';
+
+
 echo '</div>';
 }
 
