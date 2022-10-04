@@ -40,6 +40,37 @@ echo '</section>';
 endwhile; endif;
 // end of map
 
+// start of feed
+if(have_rows('hashtag')): while(have_rows('hashtag')): the_row();
+echo '<section class="position-relative bg-accent-tertiary text-white the-ld-alliance-feed" style="padding:100px 0;">';
+
+echo '<div class="container">';
+    echo '<div class="row">';
+        echo '<div class="col-md-6">';
+            echo get_sub_field('content');
+        echo '</div>';
+    echo '</div>';
+
+    if(have_rows('feed')): 
+        echo '<div class="row the-ld-alliance-feed-row">';
+        while(have_rows('feed')): the_row();
+        $image = get_sub_field('image');
+        $link = get_sub_field('link');
+        $options = get_sub_field('options');
+
+            echo '<div class="col-md-3 the-ld-alliance-feed-col" style="height:300px;">';
+                echo wp_get_attachment_image($image['id'],'full','',['class'=>'position-absolute w-100 h-100','style'=>'']);
+            echo '</div>';
+        endwhile; 
+        echo '</div>';
+    endif;
+
+echo '</div>';
+
+echo '</section>';
+endwhile; endif;
+// end of feed
+
 
 // how to use new image hover effect
 // echo '<div class="col-6 col-intro-gallery col mb-1 p-1 overflow-h">';
