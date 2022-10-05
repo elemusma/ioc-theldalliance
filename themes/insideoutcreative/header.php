@@ -41,7 +41,7 @@ echo wp_get_attachment_image($logo['id'],'full',"",['class'=>'w-100 h-auto']);
     ));
 ?>
 </div>
-<div class="col-lg-4 col-6 desktop-hidden">
+<div class="col-lg-4 col-8 desktop-hidden">
 <a id="navToggle" class="nav-toggle">
 <div>
 <div class="line-1 bg-accent-quinary"></div>
@@ -52,7 +52,7 @@ echo wp_get_attachment_image($logo['id'],'full',"",['class'=>'w-100 h-auto']);
 </div>
 
 <div id="navMenuOverlay" class="position-fixed z-2"></div>
-<div class="col-md-9 nav-items bg-white desktop-hidden" id="navItems">
+<div class="col-md-9 col-10 nav-items bg-white desktop-hidden" id="navItems">
 
 <div class="pt-5 pb-5">
 <div class="close-menu">
@@ -64,7 +64,7 @@ echo wp_get_attachment_image($logo['id'],'full',"",['class'=>'w-100 h-auto']);
 <?php 
 $logo = get_field('logo','options'); 
 if($logo){
-echo wp_get_attachment_image($logo['id'],'full',"",['class'=>'w-100 h-auto','style'=>'max-width:250px;']);
+echo wp_get_attachment_image($logo['id'],'full',"",['class'=>'w-100 h-auto','style'=>'max-width:125px;']);
 }
 ?>
 </a>
@@ -120,28 +120,18 @@ echo '<h2>' . get_sub_field('subtitle') . '</h2>';
 
 echo '<div class="mobile-hidden" style="height:250px;"></div>';
 
-endwhile; endif;
-
-echo '<div class="position-relative desktop-hidden" style="margin-top:50px;margin-bottom:250px;">';
-echo get_template_part('partials/si-vertical');
-
-if(have_rows('header')): while(have_rows('header')): the_row();
-    echo '<h2 style="transform:rotate(90deg) translate(0px, -75%);transform-origin:left;width:0;">' . get_sub_field('hashtag') . '</h2>';
-endwhile; endif;
-
-echo '</div>';
-
-if(have_rows('header')): while(have_rows('header')): the_row();
 
 // start register bar
 echo '<div class="register-bar d-md-inline-flex align-items-center pr-4 pl-4 pt-3 pb-3 bg-gray text-left" style="border-radius:50px;background:#202a2d;">';
 
+echo '<div class="d-flex align-items-center">';
 echo '<div class="register-bar-icon pr-3">';
 echo get_sub_field('icon');
 echo '</div>';
 
 echo '<div class="register-bar-text pr-3">';
 echo '<p style="" class="mb-0 text-lg-center text-left"><strong>' . get_sub_field('field_label') . '</strong></p>';
+echo '</div>';
 echo '</div>';
 
 echo '<div class="register-bar-button">';
@@ -151,7 +141,7 @@ if( $link ):
 $link_url = $link['url'];
 $link_title = $link['title'];
 $link_target = $link['target'] ? $link['target'] : '_self';
-echo '<a class="btn-main ml-lg-0 ml-md-5 ml-0 mt-md-0 mt-4" href="' . esc_url( $link_url ) . '" target="' . esc_attr( $link_target ) . '" style="border-radius:25px;box-shadow:none;white-space:nowrap;">' . esc_html( $link_title ) . '</a>';
+echo '<a class="btn-main ml-lg-0 ml-md-5 ml-0 mt-md-0 mt-4  w-100 text-center" href="' . esc_url( $link_url ) . '" target="' . esc_attr( $link_target ) . '" style="border-radius:25px;box-shadow:none;white-space:nowrap;">' . esc_html( $link_title ) . '</a>';
 endif;
 
 echo '</div>';

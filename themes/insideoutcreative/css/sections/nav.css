@@ -101,7 +101,7 @@ ul.menu>li>a {
     .nav-toggle div div {
         height: 5px;
         width: 55px;
-        margin: 4px auto;
+        margin: 4px 0 0 auto;
         transition: all .75s ease-in-out;
     }
 
