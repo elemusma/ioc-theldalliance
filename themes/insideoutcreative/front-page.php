@@ -6,10 +6,10 @@ if(have_rows('intro')): while(have_rows('intro')): the_row();
 echo '<section class="position-relative" style="padding:100px 0;">';
 echo '<div class="container">';
 echo '<div class="row align-items-center">';
-    echo '<div class="col-md-6">';
+    echo '<div class="col-lg-6">';
         echo get_sub_field('video');
     echo '</div>';
-    echo '<div class="col-md-6">';
+    echo '<div class="col-lg-6 pt-lg-0 pt-4">';
         echo '<div class="h4">';
         echo get_sub_field('content');
         echo '</div>';
@@ -61,8 +61,8 @@ echo '<div class="container">';
         $link_target = $link['target'] ? $link['target'] : '_self';
         $options = get_sub_field('options');
 
-            echo '<a href="' . $link_url . '" target="' . $link_target . '" class="col-md-3 the-ld-alliance-feed-col overflow-h" style="height:300px;">';
-                echo wp_get_attachment_image($image['id'],'full','',['class'=>'position-absolute w-100 h-100 the-ld-alliance-feed-img','style'=>'top:0;left:0;']);
+            echo '<a href="' . $link_url . '" target="' . $link_target . '" class="col-lg-3 col-md-6 the-ld-alliance-feed-col overflow-h" style="height:300px;">';
+                echo wp_get_attachment_image($image['id'],'full','',['class'=>'position-absolute w-100 h-100 the-ld-alliance-feed-img','style'=>'top:0;left:0;object-fit:cover;']);
                 echo '<div class="position-absolute w-100 h-100 bg-accent-octonary the-ld-alliance-feed-overlay" style="top:0;left:0;"></div>';
 
                 if($options == 'Facebook'){

@@ -23,7 +23,7 @@ if(get_field('custom_css')) {
 <div class="nav">
 <div class="container">
 <div class="row align-items-center">
-<div class="col-lg-1 col-md-6">
+<div class="col-lg-1 col-md-3 col-4">
 <a href="<?php echo home_url(); ?>">
 <?php 
 $logo = get_field('logo','options'); 
@@ -33,7 +33,7 @@ echo wp_get_attachment_image($logo['id'],'full',"",['class'=>'w-100 h-auto']);
 ?>
 </a>
 </div>
-<div class="col-6">
+<div class="col-6 mobile-hidden">
 <?php
     wp_nav_menu(array(
         'menu' => 'primary',
@@ -44,9 +44,9 @@ echo wp_get_attachment_image($logo['id'],'full',"",['class'=>'w-100 h-auto']);
 <div class="col-lg-4 col-6 desktop-hidden">
 <a id="navToggle" class="nav-toggle">
 <div>
-<div class="line-1 bg-accent"></div>
-<div class="line-2 bg-accent"></div>
-<div class="line-3 bg-accent"></div>
+<div class="line-1 bg-accent-quinary"></div>
+<div class="line-2 bg-accent-quinary"></div>
+<div class="line-3 bg-accent-quinary"></div>
 </div>
 </a>
 </div>
@@ -80,7 +80,7 @@ echo wp_get_attachment_image($logo['id'],'full',"",['class'=>'w-100 h-auto','sty
 
 </header>
 <?php
-echo '<section class="hero position-relative">';
+echo '<section class="hero position-relative" style="padding:350px 0 50px;">';
 $globalPlaceholderImg = get_field('global_placeholder_image','options');
 if(is_page()){
 if(has_post_thumbnail()){
@@ -94,9 +94,9 @@ echo wp_get_attachment_image($globalPlaceholderImg['id'],'full','',['class'=>'w-
 
 
 if(is_front_page()) {
-echo '<div class="position-relative text-white text-center" style="padding:350px 0 50px;">';
+echo '<div class="position-relative text-white text-center" style="">';
 
-echo '<div class="position-absolute" style="top:25%;right:25px;">';
+echo '<div class="position-absolute mobile-hidden" style="top:25%;right:25px;">';
 echo get_template_part('partials/si-vertical');
 
 if(have_rows('header')): while(have_rows('header')): the_row();
@@ -118,17 +118,30 @@ echo '</div>';
 
 echo '<h2>' . get_sub_field('subtitle') . '</h2>';
 
-echo '<div class="" style="height:250px;"></div>';
+echo '<div class="mobile-hidden" style="height:250px;"></div>';
+
+endwhile; endif;
+
+echo '<div class="position-relative desktop-hidden" style="margin-top:50px;margin-bottom:250px;">';
+echo get_template_part('partials/si-vertical');
+
+if(have_rows('header')): while(have_rows('header')): the_row();
+    echo '<h2 style="transform:rotate(90deg) translate(0px, -75%);transform-origin:left;width:0;">' . get_sub_field('hashtag') . '</h2>';
+endwhile; endif;
+
+echo '</div>';
+
+if(have_rows('header')): while(have_rows('header')): the_row();
 
 // start register bar
-echo '<div class="register-bar d-inline-flex align-items-center pr-4 pl-4 pt-3 pb-3 bg-gray" style="border-radius:50px;background:#202a2d;">';
+echo '<div class="register-bar d-md-inline-flex align-items-center pr-4 pl-4 pt-3 pb-3 bg-gray text-left" style="border-radius:50px;background:#202a2d;">';
 
 echo '<div class="register-bar-icon pr-3">';
 echo get_sub_field('icon');
 echo '</div>';
 
 echo '<div class="register-bar-text pr-3">';
-echo '<p style="" class="mb-0"><strong>' . get_sub_field('field_label') . '</strong></p>';
+echo '<p style="" class="mb-0 text-lg-center text-left"><strong>' . get_sub_field('field_label') . '</strong></p>';
 echo '</div>';
 
 echo '<div class="register-bar-button">';
@@ -138,7 +151,7 @@ if( $link ):
 $link_url = $link['url'];
 $link_title = $link['title'];
 $link_target = $link['target'] ? $link['target'] : '_self';
-echo '<a class="btn-main" href="' . esc_url( $link_url ) . '" target="' . esc_attr( $link_target ) . '" style="border-radius:25px;box-shadow:0;">' . esc_html( $link_title ) . '</a>';
+echo '<a class="btn-main ml-lg-0 ml-md-5 ml-0 mt-md-0 mt-4" href="' . esc_url( $link_url ) . '" target="' . esc_attr( $link_target ) . '" style="border-radius:25px;box-shadow:none;white-space:nowrap;">' . esc_html( $link_title ) . '</a>';
 endif;
 
 echo '</div>';
