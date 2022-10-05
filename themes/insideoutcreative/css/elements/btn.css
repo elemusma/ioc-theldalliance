@@ -19,6 +19,8 @@ a.btn-main {
     box-shadow: 3px 4px rgba(32, 42, 45, .5);
     display: inline-block;
     transition: all .25s ease-in-out;
+    font-family: rubik, sans-serif;
+    font-weight: 700;
 }
 
 a.btn-main:hover {

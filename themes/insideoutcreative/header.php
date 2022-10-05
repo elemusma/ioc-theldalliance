@@ -166,7 +166,7 @@ echo '<div class="container pt-5 pb-5 text-white text-center">';
 echo '<div class="row">';
 echo '<div class="col-md-12">';
 if(is_page() || !is_front_page()){
-echo '<h1 class="">' . get_the_title() . '</h1>';
+echo '<h1 class="text-uppercase">' . get_the_title() . '</h1>';
 } elseif(is_single()){
 echo '<h1 class="">' . get_single_post_title() . '</h1>';
 } elseif(is_author()){
