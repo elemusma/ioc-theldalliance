@@ -4,6 +4,9 @@
   --accent-tertiary: #202a2d;
   --accent-quaternary: #ff844d;
   --accent-quinary: #0073df;
+  --accent-senary: #def0ff;
+  --accent-septenary: #00296e;
+  --accent-octonary: #d54300;
 }
 
 html {
@@ -60,13 +63,39 @@ a.bg-accent-quaternary:hover {
   background: var(--accent-primary);
 }
 
-.bg-accent-green {
-  background: #22ae07;
+.bg-accent-quinary {
+  background: var(--accent-quinary);
 }
 
-.bg-accent-gold {
-  background: #e2c391;
+a.bg-accent-quinary:hover {
+  background: var(--accent-primary);
 }
+
+.bg-accent-senary {
+  background: var(--accent-senary);
+}
+
+a.bg-accent-senary:hover {
+  background: var(--accent-primary);
+}
+
+.bg-accent-septenary {
+  background: var(--accent-septenary);
+}
+
+a.bg-accent-septenary:hover {
+  background: var(--accent-primary);
+}
+
+.bg-accent-octonary {
+  background: var(--accent-octonary);
+}
+
+a.bg-accent-octonary:hover {
+  background: var(--accent-primary);
+}
+
+
 
 .bg-gray {
   background: #adadad;

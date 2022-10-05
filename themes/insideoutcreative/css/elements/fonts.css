@@ -19,6 +19,10 @@ a {
   color: var(--accent-tertiary);
 }
 
+.text-accent-septenary {
+  color: var(--accent-septenary);
+}
+
 .text-gray {
   color: #585556;
 }
@@ -57,7 +61,7 @@ a.text-black:hover {
 
 html,
 body {
-  font-family: "proxima_novaregular";
+  font-family: work-sans, sans-serif;
 }
 
 .light {
@@ -70,7 +74,8 @@ body {
 
 .bold,
 strong {
-  font-family: "proxima_novabold";
+  font-family: work-sans, sans-serif;
+  font-weight: 700;
 }
 
 blockquote {
@@ -86,13 +91,20 @@ h6 {
   font-family: rubik, sans-serif;
 }
 
-h1 .bold,
-h2 .bold,
-h3 .bold,
-h4 .bold,
-h5 .bold,
-h6 .bold {
+h1.bold,
+h2.bold,
+h3.bold,
+h4.bold,
+h5.bold,
+h6.bold,
+.h1.bold,
+.h2.bold,
+.h3.bold,
+.h4.bold,
+.h5.bold,
+.h6.bold {
   font-weight: 800;
+  font-family: rubik, sans-serif;
 }
 
 /* Rubik Regular
@@ -113,4 +125,8 @@ font-style: normal;
 Rubik Bold Italic
 font-family: rubik, sans-serif;
 font-weight: 700;
-font-style: italic; */
+font-style: italic; 
+
+Work Sans
+font-family: work-sans, sans-serif;
+*/

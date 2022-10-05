@@ -30,10 +30,10 @@ ul.menu>li.menu-item-has-children {
 ul.menu>li>a {
     padding: 9px;
     /* color:white; */
-    font-weight: 200;
-    text-transform: uppercase;
-    font-size: 14px;
-    font-family: unset;
+    font-weight: 500;
+    /* text-transform: uppercase; */
+    font-size: 18px;
+    /* font-family: unset; */
 }
 
 .current-menu-item>a,

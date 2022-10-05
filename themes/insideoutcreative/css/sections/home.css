@@ -1,0 +1,45 @@
+.the-ld-alliance-feed-col {
+    cursor: pointer;
+}
+
+.the-ld-alliance-feed-overlay {
+    opacity: 0;
+    transition: all .25s ease-in-out;
+}
+
+.the-ld-alliance-feed-img {
+    transition: all .25s ease-in-out;
+}
+
+.the-ld-alliance-feed-col:hover .the-ld-alliance-feed-overlay {
+    opacity: .35;
+}
+
+.the-ld-alliance-feed-col:hover .the-ld-alliance-feed-img {
+    transform: scale(1.15);
+}
+
+.the-ld-alliance-feed-col .the-ld-alliance-feed-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 1px solid var(--accent-tertiary);
+    background: var(--accent-tertiary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 15px;
+    right: 15px;
+    transition: all .25s ease-in-out;
+}
+
+.the-ld-alliance-feed-col:hover .the-ld-alliance-feed-icon {
+    background: var(--accent-primary);
+    border-color: var(--accent-primary);
+}
+
+.the-ld-alliance-feed-col .the-ld-alliance-feed-icon svg {
+    width: 20px;
+    height: 20px;
+    fill: white;
+}
