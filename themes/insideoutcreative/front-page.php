@@ -30,9 +30,26 @@ echo wp_get_attachment_image($bgImg['id'],'full','',['class'=>'w-100 h-100 posit
 
 echo '<div class="container">';
 echo '<div class="row align-items-center">';
-    echo '<div class="col-md-6">';
+    echo '<div class="col-lg-6">';
         echo get_sub_field('content_left');
     echo '</div>';
+
+if(have_rows('list_left')):
+    echo '<div class="col-lg-3 col-md-6">';
+while(have_rows('list_left')): the_row();
+        echo '<span class="h4 d-block"><strong>' . get_sub_field('text') . '</strong></span>';
+endwhile;
+    echo '</div>';
+endif;
+if(have_rows('list_right')):
+    echo '<div class="col-lg-3 col-md-6">';
+while(have_rows('list_right')): the_row();
+echo '<span class="h4 d-block"><strong>' . get_sub_field('text') . '</strong></span>';
+endwhile;
+    echo '</div>';
+endif;
+
+
 echo '</div>';
 echo '</div>';
 
