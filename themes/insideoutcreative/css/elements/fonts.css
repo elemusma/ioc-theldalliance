@@ -112,6 +112,20 @@ h1 {
   font-weight: 700;
 }
 
+h2 {
+  font-size: 3.5rem;
+  font-weight: 800;
+}
+
+h3 {
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+.display-6 {
+  font-size: 2rem;
+}
+
 @media only screen and (min-width:992px) {
   h2.h1 {
     font-size: 4.25em;

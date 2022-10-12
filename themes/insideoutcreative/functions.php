@@ -11,9 +11,9 @@ wp_enqueue_style('hero', get_theme_file_uri('/css/sections/hero.css'));
 wp_enqueue_style('contact', get_theme_file_uri('/css/sections/contact.css'));
 wp_enqueue_style('img', get_theme_file_uri('/css/elements/img.css'));
 
-if(is_front_page()){
+// if(is_front_page()){
 	wp_enqueue_style('home', get_theme_file_uri('/css/sections/home.css'));
-}
+// }
 if(is_page_template('templates/about.php')){
 	wp_enqueue_style('about-custom', get_theme_file_uri('/css/sections/about.css'));
 	wp_enqueue_style('intro', get_theme_file_uri('/css/sections/intro.css'));
@@ -126,7 +126,7 @@ function smartwp_remove_wp_block_library_css(){
 		wp_dequeue_style( 'wc-block-style' ); // Remove WooCommerce block CSS
 	}
 } 
-add_action( 'wp_enqueue_scripts', 'smartwp_remove_wp_block_library_css', 100 );
+// add_action( 'wp_enqueue_scripts', 'smartwp_remove_wp_block_library_css', 100 );
 
 // add_filter('show_admin_bar', '__return_false');
 
@@ -165,6 +165,8 @@ function btn_shortcode( $atts, $content = null ) {
 	// return '<a class="btn-accent-primary" href="' . esc_attr($a['href']) . '" target="' . esc_attr($a['target']) . '">' . $content . '</a>';
 	
 	return '<a class="' . esc_attr($a['class']) . '" href="' . esc_attr($a['href']) . '" style="' . esc_attr($a['style']) . '" target="' . esc_attr($a['target']) . '">' . $content . '</a>';
+
+	// [button href="/about/" style="" target="_blank" class="btn-main mt-4"]LEARN ABOUT US[/button]
 	
 	}
 	
@@ -181,9 +183,13 @@ function btn_shortcode( $atts, $content = null ) {
 			), $atts );
 
 		return '<div class="divider ' . esc_attr($a['class']) . '" style="' . esc_attr($a['style']) . '"></div>';
+
+		// [divider]
 	}
 
 	add_shortcode( 'divider', 'divider_shortcode' );
+
+
 
 // ENABLE WOOCOMMERCE
 // add_action('after_setup_theme',function() {

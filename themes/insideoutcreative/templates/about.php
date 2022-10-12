@@ -112,6 +112,36 @@ echo '</section>';
         echo '</div>';
         echo '</section>';
     endwhile; endif;
+    } elseif($layout == 'Two columns'){
+        if(have_rows('lists')): while(have_rows('lists')): the_row();
+
+        if(have_rows('list_item')): while(have_rows('list_item')): the_row();
+        echo '<section class="" style="padding:100px 0;">';
+        echo '<div class="container">';
+        echo '<div class="row text-center">';
+
+        echo '<div class="col-lg-9">';
+        echo get_sub_field('content');
+        echo '</div>';
+
+        $link = get_field('link');
+        if( $link ): 
+            echo '<div class="col-lg-3">';
+            $link_url = $link['url'];
+            $link_title = $link['title'];
+            $link_target = $link['target'] ? $link['target'] : '_self';
+                echo do_shortcode('[button href="' . esc_url( $link_url ) . '" style="" target="_blank" class="btn-main mt-4" target="' . esc_attr( $link_target ) . '"]' . esc_html( $link_title ) . '[/button]');
+            echo '</div>';
+        endif;
+
+        echo '</div>';
+        echo '</div>';
+        echo '</section>';
+
+        endwhile; endif;
+
+        endwhile; endif;
+        
     }
     
 endwhile; 

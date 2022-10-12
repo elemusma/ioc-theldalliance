@@ -7,6 +7,7 @@
   --accent-senary: #def0ff;
   --accent-septenary: #00296e;
   --accent-octonary: #d54300;
+  /* --accent-octonary: #5cb8ff; */
 }
 
 html {
@@ -209,6 +210,10 @@ hr.text-white {
 
 .grecaptcha-badge {
   display: none !important;
+}
+
+.container {
+  max-width: 1300px;
 }
 
 @media screen and (max-width: 1199px) {

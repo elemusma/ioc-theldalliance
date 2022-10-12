@@ -167,6 +167,38 @@ echo '<div class="row">';
 echo '<div class="col-md-12">';
 if(is_page() || !is_front_page()){
 echo '<h1 class="text-uppercase">' . get_the_title() . '</h1>';
+if(get_field('subheader')):
+    echo '<span class="d-block" style="font-size:2rem;">' . get_field('subheader') . '</span>';
+endif;
+
+if(get_field('show_register_bar')=="Yes"):
+
+    // start register bar
+echo '<div class="register-bar d-md-inline-flex align-items-center pr-4 pl-4 pt-3 pb-3 bg-gray text-left" style="border-radius:50px;background:#202a2d;margin-top:100px;">';
+
+echo '<div class="d-flex align-items-center">';
+echo '<div class="register-bar-icon pr-3">';
+echo '<svg xmlns="http://www.w3.org/2000/svg" width="44" height="44"><g fill="none" fill-rule="evenodd" stroke="#FFF" stroke-width="2" transform="translate(0 -.5)"><circle cx="22" cy="22.5" r="21"></circle><path d="M9.72 19.5v6M31.32 12v21M9.72 21l21.6-7.5M9.72 24l21.6 7.5m-17.399-6.041v.041c.084 2.818 1.85 5.281 4.42 6.164 2.572.884 5.398-.002 7.075-2.215" stroke-linecap="round" stroke-linejoin="round"></path></g></svg>';
+echo '</div>';
+
+echo '<div class="register-bar-text pr-3">';
+echo '<p style="" class="mb-0 text-lg-center text-left"><strong>Register with Us to get FREE swag, activities, & an opportunity to attend The 2022 Young Leaders Organizing Institute!</strong></p>';
+echo '</div>';
+echo '</div>';
+
+echo '<div class="register-bar-button">';
+
+echo '<a class="btn-main ml-lg-0 ml-md-5 ml-0 mt-md-0 mt-4  w-100 text-center" href="' . home_url() . '/start-a-club/register-with-us/" target="_blank" style="border-radius:25px;box-shadow:none;white-space:nowrap;">REGISTER TODAY</a>';
+
+
+echo '</div>';
+
+echo '</div>';
+// end register bar
+
+endif;
+
+
 } elseif(is_single()){
 echo '<h1 class="">' . get_single_post_title() . '</h1>';
 } elseif(is_author()){
