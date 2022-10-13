@@ -155,7 +155,7 @@ ul.menu>li>a {
     ul.sub-menu {
         padding: 0 20px;
         position: absolute;
-        background: #e1c95f;
+        background: var(--accent-quinary);
         z-index: 10;
         height: 0;
         overflow: hidden;
@@ -181,7 +181,7 @@ ul.sub-menu li {
 }
 
 ul.sub-menu li a {
-    color: black;
+    color: white;
 }
 
 /* for blog and other pages */
