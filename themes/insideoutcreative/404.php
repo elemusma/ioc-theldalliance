@@ -6,7 +6,7 @@
 </style>
 <?php
 $globalImg = get_field('global_placeholder_image','options');
-echo '<section class="position-relative bg-attachment text-white" style="background:url('. $globalImg['url'] . ');background-size:cover;background-attachment:fixed;padding:150px 0;">';
+echo '<section class="position-relative bg-attachment text-white sasdf" style="background:url('. $globalImg['url'] . ');background-size:cover;background-attachment:fixed;padding:150px 0;">';
 
 echo wp_get_attachment_image(251,'full','',['class'=>'position-absolute','style'=>'top:0;right:0;']);
 
