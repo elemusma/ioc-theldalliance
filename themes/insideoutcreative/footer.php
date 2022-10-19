@@ -13,7 +13,7 @@ wp_nav_menu(array(
 'menu_class'=>'menu d-flex flex-wrap list-unstyled justify-content-center text-white'
 ));
 
-if(have_rows('header')): while(have_rows('header')): the_row();
+if(have_rows('header',2)): while(have_rows('header',2)): the_row();
     echo '<h2 class="text-white h1 bold">' . get_sub_field('hashtag') . '</h2>';
 endwhile; endif;
 
@@ -24,7 +24,7 @@ echo '</div>';
 echo '</div>';
 echo '</div>';
 echo '</section>';
-echo '<section class="bg-accent-senary pt-4 pb-4">';
+echo '<section class="bg-white pt-4 pb-4">';
 
 echo '<div class="container">';
 echo '<div class="row justify-content-center align-items-center">';
