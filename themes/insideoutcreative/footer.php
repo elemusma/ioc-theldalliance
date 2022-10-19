@@ -24,7 +24,7 @@ echo '</div>';
 echo '</div>';
 echo '</div>';
 echo '</section>';
-echo '<section class="bg-white pt-4 pb-4">';
+echo '<section class="bg-white s pt-4 pb-4">';
 
 echo '<div class="container">';
 echo '<div class="row justify-content-center align-items-center">';
