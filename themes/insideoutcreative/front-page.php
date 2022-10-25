@@ -20,13 +20,26 @@ if(get_the_content()){
     }
 
 // start of map
+// echo '<iframe src="https://storage.googleapis.com/maps-solutions-eu760wln16/locator-plus/zipu/locator-plus.html"
+//     width="100%" height="600px"
+//     style="border:0;"
+//     loading="lazy">
+//   </iframe>';
+
+// echo '<iframe src="https://www.google.com/maps/d/embed?mid=1BNq6Un_nkiUuYn_KjLHhmrnxoKb8nKQ&ehbc=2E312F" width="100%" height="700" style="border:0;" loading="lazy"></iframe>';
+
+// echo '<div id="map" style="height:500px;width:100%"></div>';
+
+// https://console.cloud.google.com/google/maps-apis/build/locator-plus?project=the-nd-alliance
+
+
 if(have_rows('google_map')): while(have_rows('google_map')): the_row();
-echo '<div class="position-relative pt-5 pb-5">';
-echo '<div class="title position-absolute px-5 py-3 z-2 text-center" style="background:rgba(255,255,255,.85);border-radius:25px;top:25%;left:15%;">';
+echo '<div class="position-relative pt-5" style="margin-bottom:-7px;">';
+echo '<div class="title position-absolute px-5 py-3 z-2 text-center" style="background:rgba(255,255,255,.85);border-radius:25px;top:10%;right:1%;">';
 echo '<span class="h3 bold" style="color:#4A4AFE;">' . get_sub_field('title') . '</span>';
 echo '</div>';
-echo '<div class="content position-absolute px-5 py-3 z-2 col-lg-4 col-md-9" style="background:rgba(255,255,255,.85);border-radius:25px;top:45%;left:15%;">';
-echo '<span class="h3" style="color:#32596F;">' . get_sub_field('content_area') . '</span>';
+echo '<div class="content position-absolute px-5 py-3 z-2 col-lg-4 col-md-9" style="background:rgba(255,255,255,.85);border-radius:25px;bottom:10%;left:30%;">';
+echo '<span class="h6" style="color:#32596F;">' . get_sub_field('content_area') . '</span>';
 echo '</div>';
 
 echo get_sub_field('map_area');

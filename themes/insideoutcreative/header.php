@@ -95,7 +95,7 @@ echo wp_get_attachment_image($globalPlaceholderImg['id'],'full','',['class'=>'w-
 
 if(is_front_page()) {
     
-    echo '<div class="position-absolute mobile-hidden text-white" style="top:25%;right:25px;">';
+    echo '<div class="position-absolute mobile-hidden text-white z-1" style="top:25%;right:25px;">';
     echo get_template_part('partials/si-vertical');
     
     if(have_rows('header')): while(have_rows('header')): the_row();
