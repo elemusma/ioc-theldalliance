@@ -198,7 +198,7 @@ hr.text-white {
 }
 
 .divider {
-  background: var(--accent-quaternary);
+  background: var(--accent-quinary);
   height: 1px;
   width: 100px;
   /* margin: 10px auto 25px; */
