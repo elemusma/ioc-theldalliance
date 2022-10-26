@@ -30,7 +30,9 @@ echo '<div class="container">';
 echo '<div class="row justify-content-center align-items-center">';
 echo '<div class="col-lg-7 small" style="color:var(--accent-septenary);">';
 
-echo '<span class="pr-5 d-md-inline d-block">&copy; The LD Alliance</span><span class="pr-5 d-md-inline d-block"><a href="/accessibility/" class="text-accent-septenary">Accessibility</a></span><span class="pr-5 d-md-inline d-block"><a href="/accessibility/" class="text-accent-septenary">Privacy Policy</a></span><span class="pr-5 d-md-inline d-block">Site by <a href="/privacy-policy/" class="text-accent-septenary">Inside Out Creative</a></span>';
+echo get_field('website_message','options',false,false);
+
+// echo '<span class="pr-5 d-md-inline d-block">&copy; The ND Alliance</span><span class="pr-5 d-md-inline d-block"><a href="/accessibility/" class="text-accent-septenary">Accessibility</a></span><span class="pr-5 d-md-inline d-block"><a href="/accessibility/" class="text-accent-septenary">Privacy Policy</a></span><span class="pr-5 d-md-inline d-block">Site by <a href="/privacy-policy/" class="text-accent-septenary">Inside Out Creative</a></span>';
 
 echo '</div>';
 echo '<div class="col-lg-5 small d-flex align-items-center justify-content-lg-end text-lg-right" style="color:var(--accent-septenary);">';

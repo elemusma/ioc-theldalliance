@@ -58,7 +58,9 @@ echo '<div class="container">';
 echo '<div class="row">';
 
 echo '<div class="col-lg-6">';
+echo '<div style="font-size:125%;">';
 echo $content;
+echo '</div>';
 echo '</div>';
 
 echo '</div>';

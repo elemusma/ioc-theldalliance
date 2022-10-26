@@ -109,7 +109,7 @@ echo '<div class="position-relative text-white text-center" style="">';
 echo '<div class="container">';
 echo '<div class="row">';
 echo '<div class="col-12">';
-echo '<h1 class="pt-3 pb-3 mb-0 bold" style="font-size:4.5rem;">' . get_the_title() . '</h1>';
+echo '<h1 class="pt-3 pb-3 mb-0" style="font-size:4.5rem;">' . get_the_title() . '</h1>';
 
 if(have_rows('header')): while(have_rows('header')): the_row();
 
@@ -118,7 +118,7 @@ echo '<div class="divider" style="margin:10px auto 25px;"></div>';
 echo '</div>';
 
 echo '<div class="col-6 m-auto">';
-echo '<p class="lead">' . get_sub_field('subtitle') . '</p>';
+echo '<p class="" style="font-size:125%;">' . get_sub_field('subtitle') . '</p>';
 echo '</div>';
 
 echo '<div class="mobile-hidden" style="height:250px;"></div>';
@@ -179,7 +179,7 @@ echo '<div class="col-md-12">';
 if(is_page() || !is_front_page()){
 echo '<h1 class="text-uppercase">' . get_the_title() . '</h1>';
 if(get_field('subheader')):
-    echo '<span class="d-block" style="font-size:2rem;">' . get_field('subheader') . '</span>';
+    echo '<p class="d-block" style="font-size:2rem;">' . get_field('subheader') . '</p>';
 endif;
 
 if(get_field('show_register_bar')=="Yes"):
@@ -193,7 +193,7 @@ echo '<svg xmlns="http://www.w3.org/2000/svg" width="44" height="44"><g fill="no
 echo '</div>';
 
 echo '<div class="register-bar-text pr-3">';
-echo '<p style="" class="mb-0 text-lg-center text-left"><strong>Register with Us to get FREE swag, activities, & an opportunity to attend The 2022 Young Leaders Organizing Institute!</strong></p>';
+echo '<p style="" class="mb-0 text-lg-center text-left"><strong>Get FREE swag, activities, & an opportunity to attend The 2022 Young Leaders Organizing Institute!</strong></p>';
 echo '</div>';
 echo '</div>';
 
