@@ -35,7 +35,7 @@ if(get_the_content()){
 
 if(have_rows('google_map')): while(have_rows('google_map')): the_row();
 echo '<div class="position-relative pt-5" style="margin-bottom:-7px;">';
-echo '<div class="title position-absolute px-5 py-3 z-2 text-center" style="background:rgba(255,255,255,.85);border-radius:25px;top:10%;right:1%;">';
+echo '<div class="title position-absolute px-5 py-3 z-2 text-center" style="background:rgba(255,255,255,.85);border-radius:25px;top:10%;left:30%;">';
 echo '<span class="h3 bold" style="color:#4A4AFE;">' . get_sub_field('title') . '</span>';
 echo '</div>';
 echo '<div class="content position-absolute px-5 py-3 z-2 col-lg-4 col-md-9" style="background:rgba(255,255,255,.85);border-radius:25px;bottom:10%;left:30%;">';
