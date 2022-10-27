@@ -38,7 +38,7 @@ echo '<div class="position-relative pt-5" style="margin-bottom:-7px;">';
 echo '<div class="title position-absolute px-5 py-3 z-2 text-center" style="background:rgba(255,255,255,.85);border-radius:25px;top:10%;left:30%;">';
 echo '<span class="h3 bold" style="color:#4A4AFE;">' . get_sub_field('title') . '</span>';
 echo '</div>';
-echo '<div class="content position-absolute px-5 py-3 z-2 col-lg-4 col-md-9" style="background:rgba(255,255,255,.85);border-radius:25px;bottom:10%;left:30%;">';
+echo '<div class="content position-absolute px-5 py-3 z-2 col-lg-4 col-md-9" style="background:rgba(255,255,255,.85);border-radius:25px;bottom:10%;left:30%;max-width:280px;">';
 echo '<span class="h6" style="color:#32596F;">' . get_sub_field('content_area') . '</span>';
 echo '</div>';
 
