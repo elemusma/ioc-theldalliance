@@ -30,11 +30,11 @@ $logo = get_field('logo','options');
 if($logo){
 echo wp_get_attachment_image($logo['id'],'full',"",['class'=>'w-100 h-auto','style'=>'max-width:105px;']); 
 }
-?>
-</a>
-</div>
-<div class="col-md-6 col-10">
-<?php
+
+echo '</a>';
+echo '</div>';
+echo '<div class="col-md-6 col-10">';
+
     wp_nav_menu(array(
         'menu' => 'primary',
         'menu_class'=>'menu d-flex flex-wrap list-unstyled justify-content-center mb-0'
@@ -80,7 +80,15 @@ echo wp_get_attachment_image($logo['id'],'full',"",['class'=>'w-100 h-auto','sty
 
 </header>
 <?php
-echo '<section class="hero position-relative" style="padding:350px 0 50px;">';
+
+if(is_front_page()){
+    echo '<section class="hero position-relative" style="padding:350px 0 50px;">';
+    // echo '</section>';
+} else {
+    echo '<section class="hero position-relative" style="padding:200px 0 200px;">';
+}
+
+
 $globalPlaceholderImg = get_field('global_placeholder_image','options');
 if(is_page()){
 if(has_post_thumbnail()){
