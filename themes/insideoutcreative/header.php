@@ -23,17 +23,17 @@ if(get_field('custom_css')) {
 <div class="nav">
 <div class="container">
 <div class="row align-items-center">
-<div class="col-lg-1 col-md-3 col-4">
+<div class="col-lg-1 col-md-3 col-2">
 <a href="<?php echo home_url(); ?>">
 <?php 
 $logo = get_field('logo','options'); 
 if($logo){
-echo wp_get_attachment_image($logo['id'],'full',"",['class'=>'w-100 h-auto']); 
+echo wp_get_attachment_image($logo['id'],'full',"",['class'=>'w-100 h-auto','style'=>'max-width:105px;']); 
 }
 ?>
 </a>
 </div>
-<div class="col-6 mobile-hidden">
+<div class="col-md-6 col-10">
 <?php
     wp_nav_menu(array(
         'menu' => 'primary',
@@ -41,7 +41,7 @@ echo wp_get_attachment_image($logo['id'],'full',"",['class'=>'w-100 h-auto']);
     ));
 ?>
 </div>
-<div class="col-lg-4 col-8 desktop-hidden">
+<!-- <div class="col-lg-4 col-8 desktop-hidden">
 <a id="navToggle" class="nav-toggle">
 <div>
 <div class="line-1 bg-accent-quinary"></div>
@@ -49,7 +49,7 @@ echo wp_get_attachment_image($logo['id'],'full',"",['class'=>'w-100 h-auto']);
 <div class="line-3 bg-accent-quinary"></div>
 </div>
 </a>
-</div>
+</div> -->
 
 <div id="navMenuOverlay" class="position-fixed z-2"></div>
 <div class="col-md-9 col-10 nav-items bg-white desktop-hidden" id="navItems">
@@ -117,7 +117,7 @@ echo '<div class="m-auto">';
 echo '<div class="divider" style="margin:10px auto 25px;"></div>';
 echo '</div>';
 
-echo '<div class="col-6 m-auto">';
+echo '<div class="col-lg-6 col-md-9 m-auto">';
 echo '<p class="" style="font-size:125%;">' . get_sub_field('subtitle') . '</p>';
 echo '</div>';
 
