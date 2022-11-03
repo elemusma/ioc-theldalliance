@@ -22,8 +22,8 @@
 }
 
 a:hover .svg-icon {
-    background: var(--accent-primary);
-    border-color: var(--accent-primary);
+    background: var(--accent-denary);
+    border-color: var(--accent-denary);
 }
 
 a:hover .svg-icon path {

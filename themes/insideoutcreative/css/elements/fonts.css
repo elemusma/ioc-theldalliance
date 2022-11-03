@@ -6,6 +6,10 @@
   color: white;
 }
 
+/* a:hover {
+  color: var(--accent-denary);
+} */
+
 .text-accent,
 a {
   color: var(--accent-quinary);
