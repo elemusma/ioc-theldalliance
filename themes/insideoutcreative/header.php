@@ -92,12 +92,12 @@ if(is_front_page()){
 $globalPlaceholderImg = get_field('global_placeholder_image','options');
 if(is_page()){
 if(has_post_thumbnail()){
-the_post_thumbnail('full', array('class' => 'w-100 h-100 bg-img position-absolute'));
+the_post_thumbnail('full', array('class' => 'w-100 h-100 bg-img position-absolute','style'=>'object-position:top;'));
 } else {
-echo wp_get_attachment_image($globalPlaceholderImg['id'],'full','',['class'=>'w-100 h-100 bg-img position-absolute']);
+echo wp_get_attachment_image($globalPlaceholderImg['id'],'full','',['class'=>'w-100 h-100 bg-img position-absolute','style'=>'object-position:top;']);
 }
 } else {
-echo wp_get_attachment_image($globalPlaceholderImg['id'],'full','',['class'=>'w-100 h-100 bg-img position-absolute']);
+echo wp_get_attachment_image($globalPlaceholderImg['id'],'full','',['class'=>'w-100 h-100 bg-img position-absolute','style'=>'object-position:top;']);
 }
 
 
